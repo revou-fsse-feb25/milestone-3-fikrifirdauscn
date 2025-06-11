@@ -5,7 +5,7 @@ import { useCartStore } from './store/cart';
 
 
 export default function RootLayout({ children }) {
-  const cartItems = useCartStore((state) => state.items); // ✅ pakai "items" sesuai store
+  const cartItems = useCartStore((state) => state.items); 
 
   return (
     <html lang="en">
@@ -15,7 +15,7 @@ export default function RootLayout({ children }) {
       </head>
       <body className="bg-white text-gray-900 font-sans dark:bg-gray-900 dark:text-white">
         <header className="flex justify-between items-center py-4 border-b border-gray-200 dark:border-gray-700 px-6">
-          <h1 className="text-2xl font-bold text-teal-600">Revoshop</h1>
+          <a href="/" className="text-2xl font-bold text-teal-600 hover:underline">Revoshop</a>
           <nav className="flex gap-6 text-sm">
             <a href="/" className="hover:text-teal-500">Home</a>
             <a href="/cart" className="hover:text-teal-500">
