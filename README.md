@@ -1,4 +1,3 @@
-
 # 🛍️ Next.js Ecommerce App
 
 Revoshop is a simple ecommerce web app built with **Next.js 15**, **Tailwind CSS**, **Zustand**, and **NextAuth**.
@@ -64,9 +63,6 @@ src/
 
 - `/admin` and `/checkout` are protected by middleware.
 - Users must log in or be redirected to `/login`.
-
----
-
 
 ---
 
