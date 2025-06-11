@@ -1,10 +1,10 @@
 import AddToCartButton from "./component/addtocart";
 
-export const revalidate = 10;
+export const revalidate = 60;
 
 async function getData() {
   const res = await fetch("https://api.escuelajs.co/api/v1/products", {
-    next: { revalidate: 10 },
+    next: { revalidate: 60 },
   });
   if (!res.ok) throw new Error("Failed to fetch products");
   return res.json();
