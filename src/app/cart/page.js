@@ -3,7 +3,7 @@ import { useCartStore } from '../store/cart';
 
 export default function CartPage() {
   const items = useCartStore((state) => state.items);
-  const remove = useCartStore((state) => state.remove);
+  const removeFromCart = useCartStore((state) => state.removeFromCart);
   const total = items.reduce((sum, i) => sum + i.price, 0);
 
   return (
@@ -21,7 +21,7 @@ export default function CartPage() {
                   <div className="text-gray-500 text-sm">${item.price}</div>
                 </div>
                 <button
-                  onClick={() => remove(item.id)}
+                  onClick={() => removeFromCart(item.id)}
                   className="text-sm text-red-500 hover:underline"
                 >
                   Remove
